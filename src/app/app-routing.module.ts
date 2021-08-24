@@ -3,15 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'recipes',
-  },
-  {
-    path: 'recipes',
     loadChildren: () =>
-      import('./views/app-view/recipes-view/recipes-view.module').then(
-        (m) => m.RecipesViewModule
-      ),
+      import('./views/app-view/app-view.module').then((m) => m.AppViewModule),
   },
 ];
 
